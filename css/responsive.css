@@ -135,7 +135,7 @@
 
     /* Ajustes visuales generales móviles */
     .phone-3d-wrapper { width: 280px; height: auto; display: flex; justify-content: center;}
-    .float-card { font-size: 0.7rem; padding: 10px; }
+    .float-card { font-size: 0.7rem; padding: 10px; gap: 5px;}
     .fc-1 { top: 10%; left: -10%; animation: float 6s ease-in-out infinite; }
     .fc-2 { top: 30%; right: -25%; animation: float 5s ease-in-out infinite reverse; }
     .fc-3 { bottom: 10%; left: -20%; animation: float 7s ease-in-out infinite 1s; }
