@@ -1,0 +1,81 @@
+/* =========================================
+   ANIMACIONES, REVEALS Y KEYFRAMES
+========================================= */
+
+/* Cursor Glow Effect */
+#cursor-glow {
+    position: fixed;
+    width: 400px; height: 400px;
+    background: radial-gradient(circle, rgba(228,176,40,0.1) 0%, rgba(255,255,255,0) 70%);
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    mix-blend-mode: multiply;
+    transition: opacity 0.3s;
+}
+
+/* Reveal en Scroll */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.reveal-right {
+    opacity: 0;
+    transform: translateX(40px);
+    transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.reveal.active, .reveal-right.active {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+/* Animaciones de Flotación (Tarjetas 3D) */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Ripple effect en botones */
+.ripple { position: relative; overflow: hidden; }
+.ripple::after {
+    content: '';
+    position: absolute; width: 100%; height: 100%;
+    top: 0; left: 0;
+    background: rgba(255,255,255,0.2);
+    border-radius: 50%;
+    transform: scale(0);
+    opacity: 0;
+    pointer-events: none;
+}
+.ripple:active::after {
+    animation: rippleAnim 0.6s ease-out;
+}
+@keyframes rippleAnim {
+    0% { transform: scale(0); opacity: 1; }
+    100% { transform: scale(3); opacity: 0; }
+}
+
+/* Marquee Infinito */
+.marquee-section { padding: 40px 0; background: #fff; border-top: 1px solid rgba(0,0,0,0.05); border-bottom: 1px solid rgba(0,0,0,0.05); overflow: hidden; }
+.marquee-container { width: 100%; overflow: hidden; white-space: nowrap; display: flex; }
+.marquee-track {
+    display: flex;
+    gap: 80px;
+    animation: marquee 20s linear infinite;
+}
+.marquee-track span {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    color: rgba(11, 24, 73, 0.3);
+    text-transform: uppercase;
+}
+@keyframes marquee {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-50%); }
+}
+
+/* Efecto Tilt (Rotación 3D en Hover - se gestiona con JS, clase base aquí) */
+.tilt-effect { transform-style: preserve-3d; }
