@@ -60,28 +60,34 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // 4. Lógica del Menú Móvil
+    // 4. Lógica del Menú Móvil
     const mobileBtn = document.querySelector('.mobile-menu-btn');
     const navMenu = document.querySelector('.nav-menu');
     const navLinksItems = document.querySelectorAll('.nav-menu a');
+    const mainNavbar = document.getElementById('navbar'); // <-- Referencia al nav
 
     if (mobileBtn && navMenu) {
         mobileBtn.addEventListener('click', () => {
             const isActive = navMenu.classList.contains('active');
             
-            // Alternar clases
             mobileBtn.classList.toggle('active');
             navMenu.classList.toggle('active');
             
-            // Bloquear/Desbloquear el scroll del body por accesibilidad y UX
+            // FIX: Agregar clase al navbar para anular su blur
+            if(mainNavbar) mainNavbar.classList.toggle('menu-open');
+            
             document.body.style.overflow = isActive ? '' : 'hidden';
             mobileBtn.setAttribute('aria-expanded', !isActive);
         });
 
-        // Cerrar menú al hacer clic en cualquier enlace
         navLinksItems.forEach(link => {
             link.addEventListener('click', () => {
                 mobileBtn.classList.remove('active');
                 navMenu.classList.remove('active');
+                
+                // FIX: Remover clase al cerrar
+                if(mainNavbar) mainNavbar.classList.remove('menu-open');
+                
                 document.body.style.overflow = '';
                 mobileBtn.setAttribute('aria-expanded', 'false');
             });

@@ -6,7 +6,7 @@
 #cursor-glow {
     position: fixed;
     width: 400px; height: 400px;
-    background: radial-gradient(circle, #43475244 0%, #7f7f8000 70%);
+    background: radial-gradient(circle, #6d728048 0%, #7f7f8000 70%);
     border-radius: 50%;
     pointer-events: none;
     transform: translate(-50%, -50%);

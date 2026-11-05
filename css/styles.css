@@ -136,12 +136,21 @@ p { color: var(--color-text-light); font-size: 1.125rem; }
     padding: 24px 0;
     transition: var(--transition);
 }
+/* ESTADO 1: El usuario hace scroll (Aquí se ACTIVA el blur) */
 .smart-nav.scrolled {
     padding: 16px 0;
     background: var(--glass-bg);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     border-bottom: 1px solid var(--glass-border);
+}
+
+/* ESTADO 2: El usuario hace scroll Y abre el menú móvil (Aquí se DESACTIVA el blur del padre para que el hijo brille) */
+.smart-nav.scrolled.menu-open {
+    background: transparent !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    border-bottom: none !important;
 }
 .nav-container {
     max-width: var(--container-width);
