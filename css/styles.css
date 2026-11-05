@@ -279,8 +279,12 @@ p { color: var(--color-text-light); font-size: 1.125rem; }
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 32px;
 }
-.card-premium {
+.card-premium-web{
     background: #fff;
+    background-image: url('/img/web.jpg');
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
     border-radius: var(--radius-lg);
     padding: 48px 32px;
     box-shadow: var(--shadow-soft);
@@ -289,7 +293,47 @@ p { color: var(--color-text-light); font-size: 1.125rem; }
     position: relative;
     overflow: hidden;
 }
-.card-premium:hover { box-shadow: var(--shadow-hover); }
+.card-premium-web:hover { box-shadow: var(--shadow-hover); }
+
+.card-premium-ia{
+    background: #fff;
+    background:linear-gradient(#00000099, #000000b4), url('/img/ia.jpg');
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
+    border-radius: var(--radius-lg);
+    padding: 48px 32px;
+    box-shadow: var(--shadow-soft);
+    border: 1px solid rgba(0,0,0,0.02);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+.card-premium-ia:hover { box-shadow: var(--shadow-hover); }
+
+.card-premium-marketing{
+    background: #fff;
+    background:linear-gradient(#00000099, #000000b4), url('/img/marketing.jpg');
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
+    border-radius: var(--radius-lg);
+    padding: 48px 32px;
+    box-shadow: var(--shadow-soft);
+    border: 1px solid rgba(0,0,0,0.02);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+.card-premium-marketing:hover { box-shadow: var(--shadow-hover); }
+
+.card-premium-web h3 { margin-bottom: 16px; font-size: 1.5rem; color: #fff;}
+.card-premium-web p { color: #fff; font-weight: 200;}
+.card-premium-ia h3 { margin-bottom: 16px; font-size: 1.5rem; color: #fff;}
+.card-premium-ia p { color: #fff; font-weight: 200; }
+.card-premium-marketing h3 { margin-bottom: 16px; font-size: 1.5rem; color: #fff;}
+.card-premium-marketing p { color: #fff; font-weight: 200; }
+
 .card-icon { font-size: 2.5rem; margin-bottom: 24px; }
 
 /* Grid de Servicios */
