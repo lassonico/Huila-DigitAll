@@ -3,13 +3,23 @@
 ========================================= */
 :root {
     /* Paleta de colores Corporativa */
-    --color-primary: #0B1849;
+
+    --color-primary: #082032;
+    --color-primary-dark: #2C394B;
+    --color-secondary: #334756;
+    --color-accent: #FF4C29;
+    /* --color-bg: #EBEDE3; */
+    --color-bg: #e3eaed;
+
+    /* --color-primary: #0B1849;
+    --color-primary-dark: #060e2c;
     --color-secondary: #124D1C;
     --color-accent: #E4B028;
-    --color-bg: #EBEDE3;
+    --color-bg: #EBEDE3; */
     
     /* Variables de UI */
-    --color-text: #1a1a2e;
+    --color-text: #2c394b;
+    /* --color-text: #1a1a2e; */
     --color-text-light: #666;
     --glass-bg: rgba(255, 255, 255, 0.7);
     --glass-border: rgba(255, 255, 255, 0.2);
@@ -95,7 +105,7 @@ p { color: var(--color-text-light); font-size: 1.125rem; }
     box-shadow: 0 10px 20px -5px rgba(11, 24, 73, 0.3);
 }
 .btn-primary:hover {
-    background-color: #060e2c;
+    background-color: var(--color-primary-dark);
     transform: translateY(-2px);
     color: #fff;
 }
