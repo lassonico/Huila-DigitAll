@@ -21,8 +21,8 @@
     --color-text: #2c394b;
     /* --color-text: #1a1a2e; */
     --color-text-light: #666;
-    --glass-bg: rgba(255, 255, 255, 0.7);
-    --glass-border: rgba(255, 255, 255, 0.2);
+    --glass-bg: #ffffffb3;
+    --glass-border: #ffffff33;
     --shadow-soft: 0 10px 40px -10px rgba(11, 24, 73, 0.1);
     --shadow-hover: 0 20px 50px -10px rgba(11, 24, 73, 0.2);
     
